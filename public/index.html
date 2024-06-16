@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center relative"
+    style="background-image: url('./gambar/japan-background-digital-art.jpg'); background-size: cover; background-position: center;">
+
+    <!-- Overlay untuk efek warna hitam -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <div class="relative  max-w-md z-10">
+        <div id="current-datetime" class="text-center mb-4 text-white rounded p-4 text-2xl">
+        </div>
+        <h2 class="text-2xl font-bold text-white text-center mb-4">To-Do List</h2>
+        <form id="todo-form" class="mb-4">
+            <div class="relative mb-2">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="w-6 h-6 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 2a5 5 0 0 0-4.34 2.5 8 8 0 0 1 8.68 0A5 5 0 0 0 10 13zm5.5 2a1 1 0 1 1-2 0 3 3 0 0 0-5 0 1 1 0 1 1-2 0 5 5 0 0 1 7 0z" />
+                    </svg>
+                </div>
+                <input type="text" id="todo-name" class="border p-2 pl-10 rounded w-full"
+                    placeholder="Enter your name" />
+            </div>
+
+            <div class="relative mb-2">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M5 18a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5zm10-10H5v6h10v-6zm-4-5a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0V3zM7 3a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0V3z"" />
+                    </svg>
+                </div>
+                <input type=" text" id="todo-position" class="border p-2 pl-10 rounded w-full"
+                            placeholder="Enter your position" />
+                </div>
+                <input type="text" id="todo-input" class="border p-2 rounded w-full mb-2"
+                    placeholder="Add a new task" />
+                <textarea id="todo-description" class="border p-2 rounded w-full mb-2"
+                    placeholder="Task description"></textarea>
+                <select id="todo-priority" class="border p-2 rounded w-full mb-2">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <div class="relative max-w-sm mb-4">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3">
+                        <svg class="max-w h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </div>
+                    <input datepicker datepicker-autohide type="text" id="datepicker"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 py-2.5 pr-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Select date">
+                </div>
+                <button type="submit" class="w-full bg-red-800 text-white p-2 rounded hover:bg-red-900">Add
+                    Task</button>
+
+
+        </form>
+        <button type="button" onclick="window.location.href='task.html'"
+            class="w-full bg-red-800 text-white p-2 rounded hover:bg-red-900">View task</button>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+
+<script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

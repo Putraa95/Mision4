@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/id.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center"
+    style="background-image: url('./gambar/7341012.jpg'); background-size: cover; background-position: center;">
+
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
+        <h2 class="text-2xl font-bold mb-4 text-center">Task List</h2>
+        <table class="min-w-full bg-white border border-gray-500">
+            <thead>
+                <tr>
+                    <th class="py-2 px-4 border border-gray-200">Delete</th>
+                    <th class="py-2 px-4 border border-gray-200">Completed</th>
+                    <th class="py-2 px-4 border border-gray-200">Name</th>
+                    <th class="py-2 px-4 border border-gray-200">Position</th>
+                    <th class="py-2 px-4 border border-gray-200">Task</th>
+                    <th class="py-2 px-4 border border-gray-200">Description</th>
+                    <th class="py-2 px-4 border border-gray-200">Priority</th>
+                    <th class="py-2 px-4 border border-gray-200">Date</th>
+                </tr>
+            </thead>
+            <tbody id="task-list">
+                <!-- Task items will be inserted here -->
+            </tbody>
+        </table>
+        <br>
+        <div>
+            <h3 class="text-xl font-bold mb-2 text-center">Task List Done</h3>
+            <table class="min-w-full bg-white border border-gray-500">
+                <thead>
+                    <br>
+                    <tr>
+                        <th class="py-2 px-4 border border-gray-200">Delete</th>
+                        <th class="py-2 px-4 border border-gray-200">Completed</th>
+                        <th class="py-2 px-4 border border-gray-200">Name</th>
+                        <th class="py-2 px-4 border border-gray-200">Position</th>
+                        <th class="py-2 px-4 border border-gray-200">Task</th>
+                        <th class="py-2 px-4 border border-gray-200">Description</th>
+                        <th class="py-2 px-4 border border-gray-200">Priority</th>
+                        <th class="py-2 px-4 border border-gray-200">Date</th>
+                    </tr>
+                </thead>
+                <tbody id="task-list-done">
+                    <!-- Completed task items will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="flex justify-end mt-4">
+            <button onclick="goToIndex()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Exit
+            </button>
+        </div>
+    </div>
+
+</html>
+
+<script src="script2.js"></script>
